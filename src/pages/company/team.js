@@ -1,9 +1,11 @@
 import React from 'react'
 import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
 const Team = () => {
   return (
     <Layout>
+      <SEO title="The Team" />
       <h1>The Team</h1>
       <p>
         I'm baby health goth pok pok lyft, PBR&B kinfolk selfies umami next
