@@ -14,10 +14,11 @@ import Archive from './archive'
 import './layout.css'
 
 const Wrapper = styled.div`
-  max-width: 90%;
-  margin: 1rem auto;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 0.5fr;
   grid-gap: 40px;
 `
 

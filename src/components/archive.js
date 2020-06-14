@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
+import styled from 'styled-components'
 
 const POST_ARCHIVE_QUERY = graphql`
   query BlogPostArchive {
@@ -21,11 +22,21 @@ const POST_ARCHIVE_QUERY = graphql`
   }
 `
 
+const Aside = styled.aside`
+  text-align: right;
+  height: auto;
+
+  & h3,
+  ul {
+    margin: 0;
+  }
+`
+
 const Archive = () => (
   <StaticQuery
     query={POST_ARCHIVE_QUERY}
     render={({ allMarkdownRemark }) => (
-      <aside>
+      <Aside>
         <h3>Archive</h3>
         <ul>
           {allMarkdownRemark.edges.map(({ node }) => {
@@ -36,7 +47,7 @@ const Archive = () => (
             )
           })}
         </ul>
-      </aside>
+      </Aside>
     )}
   />
 )

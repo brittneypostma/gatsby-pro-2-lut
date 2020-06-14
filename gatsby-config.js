@@ -3,6 +3,7 @@ module.exports = {
     title: `Gatsby Pro 2`,
     description: `Gatsby Pro 2 course from Level Up Tutorials.`,
     author: `@brittneypostma`,
+    siteUrl: 'https://vibrant-wright-1a2c4f.netlify.app/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,6 +11,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,13 +31,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Gatsby Pro 2`,
+        short_name: `Pro`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `rebeccapurple`,
+        theme_color: `rebeccapurple`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/posts/*`],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
