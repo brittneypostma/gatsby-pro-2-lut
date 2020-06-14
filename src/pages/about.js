@@ -2,9 +2,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const About = () => {
+const About = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="About" />
       <h1>About Us</h1>
       <p>

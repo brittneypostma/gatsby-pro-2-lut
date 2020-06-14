@@ -12,7 +12,6 @@ const POST_ARCHIVE_QUERY = graphql`
           id
           excerpt
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             slug
           }
@@ -30,15 +29,9 @@ const Archive = () => (
         <h3>Archive</h3>
         <ul>
           {allMarkdownRemark.edges.map(({ node }) => {
-            const fm = node.frontmatter
             return (
               <Link to={`/posts${node.frontmatter.slug}`}>
-                <li key={node.id}>
-                  <article>
-                    <h3>{fm.title}</h3> <span>{fm.date}</span>
-                    <p>{node.excerpt}</p>
-                  </article>
-                </li>
+                <li key={node.id}>{node.frontmatter.title}</li>
               </Link>
             )
           })}
