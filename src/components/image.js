@@ -9,13 +9,9 @@ const Image = () => {
     opacity: 1,
     from: {
       opacity: 0,
-      transform: `translate3d(400px,0,0)`,
-      transition: `all 0.2s ease-out`,
     },
     to: {
       opacity: 1,
-      transform: `translate3d( 0, 0, 0)`,
-      transition: `all 0.2s ease-out`,
     },
   })
   const data = useStaticQuery(graphql`
