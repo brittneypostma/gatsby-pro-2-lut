@@ -10,6 +10,7 @@ const HeaderContainer = styled.header`
 
   & a {
     color: white;
+    border: 1px solid transparent;
   }
 
   a:hover {

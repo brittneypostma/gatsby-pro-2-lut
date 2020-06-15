@@ -34,7 +34,10 @@ const Image = () => {
     <animated.div style={styleProps}>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        style={{ height: '300px' }}
+        style={{
+          height: '300px',
+          boxShadow: `0 4px 8px 0px rgba(1, 1, 1, 0.5)`,
+        }}
       />
     </animated.div>
   )
