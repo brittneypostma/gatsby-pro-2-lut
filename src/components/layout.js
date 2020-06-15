@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Header from './header'
 import Archive from './archive'
+import Image from './image'
 import './layout.css'
 
 const Wrapper = styled.div`
@@ -42,6 +43,7 @@ const Layout = ({ children, location }) => {
     <>
       <LayoutWrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
+        {location.pathname === '/' && <Image />}
         <Wrapper>
           <main>{children}</main>
           <Archive />
