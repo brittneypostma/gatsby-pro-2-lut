@@ -9,6 +9,10 @@ body,
   height: 100%;
 }
 
+.gatsby-image-wrapper {
+  width: 100%;
+}
+
 body {
   margin: 0px;
 }
