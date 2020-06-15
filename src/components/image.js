@@ -33,6 +33,7 @@ const Image = () => {
   return (
     <animated.div style={styleProps}>
       <Img
+        alt="laptop with a person typing"
         fluid={data.placeholderImage.childImageSharp.fluid}
         style={{
           height: '300px',
