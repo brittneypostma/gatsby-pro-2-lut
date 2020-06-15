@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-remark": "^2.8.15",
     "gatsby-transformer-sharp": "^2.5.3",
+    "hast-to-hyperscript": "^9.0.0",
     "netlify-cms": "^2.10.50",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
